@@ -7,6 +7,5 @@
 			"binaryNames": "chisel"
 		}
 	},
-	"onCreateCommand": "sudo mv /usr/local/bin/chisel /usr/local/bin/chisel.gz && sudo gzip -d /usr/local/bin/chisel.gz",
 	"postAttachCommand": "chisel server --socks5"
 }
