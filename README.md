@@ -34,5 +34,9 @@ You need [Chisel](https://github.com/jpillora/chisel) installed since GitHub Cod
 11. Connect your browser to Chisel's SOCKS5 proxy by setting proxy settings to `localhost:1080`.
 
 ## Speed tests
+### GitHub Codespaces HTTP Port Forwarding
 ![Ubuntu](https://www.speedtest.net/result/14746929029.png)
 ![Alpine](https://www.speedtest.net/result/14746855197.png)
+
+### Cloudflare Tunnel
+![Ubuntu](https://www.speedtest.net/result/15249339575.png)

@@ -2,10 +2,7 @@
 	"name": "SOCKS5 Proxy Codespaces",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/gh-release:1": {
-			"repo": "jpillora/chisel",
-			"binaryNames": "chisel"
-		}
+		"ghcr.io/devcontainers-contrib/features/chisel:1": {}
 	},
 	"postAttachCommand": "chisel server --socks5"
 }
