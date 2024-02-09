@@ -17,6 +17,21 @@ flowchart LR
   end
   SOCKS5 --> Internet
 ```
+```mermaid
+flowchart LR
+  subgraph Client [Client]
+    Browser --> |SOCKS5| ChiselClient[Chisel Client]
+  end
+  ChiselClient --> |WebSocket| Cloudflare[Cloudflare Edge]
+  Cloudflare <--> |Cloudflare Tunnel| cloudflared[Cloudflare Tunnel client]
+  subgraph Codespaces [GitHub Codespaces]
+    cloudflared --> |WebSocket| ChiselServer[Chisel Server]
+    subgraph ChiselServerInternals [Chisel Server]
+      ChiselServer --> SOCKS5[SOCKS5 Proxy]
+    end
+  end
+  SOCKS5 --> Internet
+```
 
 ## Usage
 You need [Chisel](https://github.com/jpillora/chisel) installed since GitHub Codespaces only allows forwarding of HTTP protocol, and WebSocket can be used to tunnel SOCKS5 over HTTP.
